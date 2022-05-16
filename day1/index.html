@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/javascript">
+    class Person {
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        disp() {
+            document.write(`<p>Name = ${this.name}, Age = ${this.age}</p>`)
+        }
+    }
+    class Employee extends Person {
+        constructor(id, name, age) {
+            super(name, age); // passes name & age to initialize for Employee
+            this.id = id;
+        }
+    }
+    let e = new Employee(100, "Rajesh", 34);
+    e.disp();
+    </script>
+</body>
+</html>
