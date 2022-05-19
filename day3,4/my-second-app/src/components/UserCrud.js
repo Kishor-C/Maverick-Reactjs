@@ -64,12 +64,13 @@ export class FetchAllUsers extends Component {
             <button className = 'btn btn-secondary' onClick = {this.handleClick}>Refresh</button>
             <table className = 'table'>
                 <thead>
-                    <tr><th>Id</th><th>Name</th><th>DOB</th></tr>
+                    <tr><th>Id</th><th>Name</th><th>DOB</th><th>Delete</th></tr>
                 </thead>
                 <tbody>
                     {
                         this.state.usersArray.map((user, index) => <tr key = {index}>
                             <td>{user.id}</td><td>{user.name}</td><td>{user.dob}</td>
+                            <td><button className = 'btn btn-danger'>Delete</button></td>
                         </tr>)
                     }
                 </tbody>
